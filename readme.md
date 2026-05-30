@@ -1,6 +1,5 @@
 # Immersive Lanterns — Unofficial 1.21.1 Fix
 
-![Project Header](https://cdn.modrinth.com/data/vskzdsyT/images/f8424820a7570094072778cd548367b231317a92.webp)
 
 An unofficial NeoForge 1.21.1 build of [Toni's Immersive Lanterns](https://modrinth.com/mod/immersive-lanterns). This fork strips the Stonecutter multi-platform setup and **txnilib** dependency, making Curios, Accessories, LambDynamicLights, and Sodium Dynamic Lights fully optional.
 
