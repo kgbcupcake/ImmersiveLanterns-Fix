@@ -1,0 +1,58 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name} (Unofficial Fix)"
+description = '''${mod_description}'''
+authors = "${mod_authors}"
+credits = "Toni (Txni) for the original Immersive Lanterns mod"
+displayURL = "https://github.com/kgbcupcake/ImmersiveLanterns-Fix"
+logoFile = "logo.png"
+
+[[mixins]]
+config = "immersivelanterns.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "curios"
+mandatory = false
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "accessories"
+mandatory = false
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "lambdynamiclights"
+mandatory = false
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "sodiumdynamiclights"
+mandatory = false
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"

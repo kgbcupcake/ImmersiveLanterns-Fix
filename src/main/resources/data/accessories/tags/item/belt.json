@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lantern",
+    "minecraft:soul_lantern"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "accessories"
+    }
+  ]
+}
