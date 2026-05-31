@@ -36,23 +36,21 @@ public class LanternCurioRenderer extends BaseLanternRenderer implements ICurioR
         CuriosRendererRegistry.register(Items.SOUL_LANTERN, LanternCurioRenderer::new);
     }
 
-    public static boolean isEquipped(Player player) {
-        var curios = CuriosApi.getCuriosInventory(player);
-        if (!curios.isPresent())
-            return false;
+    private static boolean isLantern(ItemStack stack) {
+        return stack.getItem() == Items.LANTERN || stack.getItem() == Items.SOUL_LANTERN;
+    }
 
-        return curios.get().isEquipped(stack -> stack.getItem() == Items.LANTERN || stack.getItem() == Items.SOUL_LANTERN);
+    public static boolean isEquipped(Player player) {
+        return CuriosApi.getCuriosInventory(player)
+                .flatMap(handler -> handler.findFirstCurio(LanternCurioRenderer::isLantern, "belt"))
+                .isPresent();
     }
 
     public static ItemStack getEquipped(Player player) {
-        if (!isEquipped(player))
-            return null;
-
         return CuriosApi.getCuriosInventory(player)
-                .get()
-                .findFirstCurio(stack -> stack.getItem() == Items.LANTERN || stack.getItem() == Items.SOUL_LANTERN)
-                .get()
-                .stack();
+                .flatMap(handler -> handler.findFirstCurio(LanternCurioRenderer::isLantern, "belt"))
+                .map(result -> result.stack())
+                .orElse(null);
     }
 
     @Override

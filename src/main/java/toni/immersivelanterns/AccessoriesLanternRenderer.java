@@ -44,6 +44,9 @@ class AccessoriesLanternRenderer extends BaseLanternRenderer implements SimpleAc
             return null;
 
         var equipped = capability.getEquipped(stack -> stack.getItem() == Items.LANTERN || stack.getItem() == Items.SOUL_LANTERN);
+        if (equipped == null || equipped.isEmpty())
+            return null;
+
         return equipped.get(0).reference().getStack();
     }
 

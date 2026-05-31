@@ -29,18 +29,22 @@ public class ImmersiveLanterns {
     }
 
     public static boolean isEquipped(Player player) {
+        boolean equipped = false;
         if (isModLoaded("accessories")) {
-            return AccessoriesBridge.isEquipped(player);
+            equipped |= AccessoriesBridge.isEquipped(player);
         }
         if (isModLoaded("curios")) {
-            return CuriosBridge.isEquipped(player);
+            equipped |= CuriosBridge.isEquipped(player);
         }
-        return false;
+        return equipped;
     }
 
     public static ItemStack getEquipped(Player player) {
         if (isModLoaded("accessories")) {
-            return AccessoriesBridge.getEquipped(player);
+            var stack = AccessoriesBridge.getEquipped(player);
+            if (stack != null && !stack.isEmpty()) {
+                return stack;
+            }
         }
         if (isModLoaded("curios")) {
             return CuriosBridge.getEquipped(player);
@@ -58,7 +62,8 @@ public class ImmersiveLanterns {
     public void onInitializeClient() {
         if (isModLoaded("accessories")) {
             AccessoriesBridge.register();
-        } else if (isModLoaded("curios")) {
+        }
+        if (isModLoaded("curios")) {
             CuriosBridge.register();
         }
     }

@@ -34,7 +34,9 @@ public class ImmersiveLanternsMixinConfigPlugin implements IMixinConfigPlugin {
     }
 
     private static boolean isDynamicLightsLoaded() {
-        return isModLoaded("lambdynamiclights") || isModLoaded("sodiumdynamiclights");
+        return isModLoaded("lambdynamiclights")
+                || isModLoaded("lambdynlights")
+                || isModLoaded("sodiumdynamiclights");
     }
 
     public static boolean isIrisRenderingShadows() {
