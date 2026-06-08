@@ -9,7 +9,7 @@ displayName = "${mod_name} (Unofficial Fix)"
 description = '''${mod_description}'''
 authors = "${mod_authors}"
 credits = "Toni (Txni) for the original Immersive Lanterns mod"
-displayURL = "https://github.com/kgbcupcake/ImmersiveLanterns-Fix"
+displayURL = "https://modrinth.com/mod/immersive-lanterns-(unofficial-patch"
 logoFile = "logo.png"
 
 [[mixins]]

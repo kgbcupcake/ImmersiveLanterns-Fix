@@ -38,8 +38,9 @@ An unofficial NeoForge 1.21.1 build of [Toni's Immersive Lanterns](https://modri
 ## Installation
 
 1. Install [NeoForge](https://neoforged.net/) for Minecraft 1.21.1.
-2. Install at least one belt-slot mod: [Curios](https://modrinth.com/mod/curios) **or** [Accessories](https://modrinth.com/mod/accessories).
-3. Optionally install [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) for dynamic light emission.
+
+2. (Optional) Install at least one belt-slot mod: [Curios](https://modrinth.com/mod/curios) **or** [Accessories](https://modrinth.com/mod/accessories).
+3. (Optional) Install [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) for dynamic light emission.
 4. Drop the mod `.jar` into your `mods/` folder.
 5. Launch the game.
 
