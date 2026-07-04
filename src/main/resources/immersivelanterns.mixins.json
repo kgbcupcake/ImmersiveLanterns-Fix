@@ -1,16 +1,13 @@
 {
-  "required": true,
-  "package": "toni.immersivelanterns.foundation.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "minVersion": "0.8",
-  "mixins": [],
-  "injectors": {
-    "defaultRequire": 1
-  },
-  "plugin": "toni.immersivelanterns.foundation.ImmersiveLanternsMixinConfigPlugin",
-  "client": [
-    "IrisIdMapUniformsMixin",
-    "ModelPartAccessor",
-    "PlayerMixin"
-  ]
+	"required": true,
+	"package": "toni.immersivelanterns.foundation.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"minVersion": "0.8",
+	"refmap": "immersivelanterns.refmap.json",
+	"mixins": [],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"plugin": "toni.immersivelanterns.foundation.ImmersiveLanternsMixinConfigPlugin",
+	"client": ["IrisIdMapUniformsMixin", "ModelPartAccessor", "PlayerMixin"]
 }
